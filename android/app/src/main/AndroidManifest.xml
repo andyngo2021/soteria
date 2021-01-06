@@ -9,6 +9,10 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="soteria"
         android:icon="@mipmap/ic_launcher">
+
+        <!-- Adding API Key -->
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyCZbB5j3zug_gjS7WnAoDivGZCPeDtHpxg"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
