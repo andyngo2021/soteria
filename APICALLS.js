@@ -14,12 +14,12 @@ async function getRestrooms(lat, lng)
         let is_unisex = tmp_restroom['unisex'];
         let is_accessible = tmp_restroom['accessible'];
         let description = "";
-        if (is_accessible) description += "ACCESSIBLE";
+        if (is_accessible) description += "</br>ACCESSIBLE";
         // console.log(tmp_restroom);
         //  all_crimes.push(L.marker([tmp_lat, tmp_lng], {icon: crimeIcon}).bindPopup("<b>Crime</b><br/>"+"<b>"+tmp_category+"</b><br/>"+tmp_desc));
         if (is_unisex)
         {
-            all_refuges.push(L.marker([tmp_lat, tmp_lng], {icon: refugeIcon}).bindPopup("<b>Gender Neutral Restroom: "+tmp_name+"</b></br>"+tmp_street+"</br"+tmp_directions+"</br"+description));
+            all_refuges.push(L.marker([tmp_lat, tmp_lng], {icon: refugeIcon}).bindPopup("<b>Gender Neutral Restroom: "+tmp_name+"</b></br>"+tmp_street+tmp_directions+"</br>"+description));
         }
         else
         {
