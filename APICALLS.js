@@ -48,8 +48,8 @@ async function getCrime(lat, lng, month) // All strings btw
         }
         tmp_category = tmp_category.join(" ");
 
-        let tmp_lat = parseFloat(tmp_crime["location"]["latitude"]) + (Math.random()/5)*getRandom(-1, 1);
-        let tmp_lng = parseFloat(tmp_crime["location"]["longitude"]) + (Math.random()/5)*getRandom(-1, 1);
+        let tmp_lat = parseFloat(tmp_crime["location"]["latitude"]); //+ (Math.random()/10)*getRandom(-1, 1);
+        let tmp_lng = parseFloat(tmp_crime["location"]["longitude"]); //+ (Math.random()/10)*getRandom(-1, 1);
         let tmp_desc = tmp_crime["location"]["street"]["name"];
         all_crimes.push(L.marker([tmp_lat, tmp_lng], {icon: crimeIcon}).bindPopup("<b>Crime</b><br/><b>"+tmp_category+"</b><br/>"+tmp_desc));
     }
@@ -57,7 +57,7 @@ async function getCrime(lat, lng, month) // All strings btw
 
 function generateRestrooms()
 {
-    for (let i=0; i<2; i++)
+    for (let i=0; i<10; i++)
     {
         setTimeout(getTheRestrooms, 500*i);
     }
@@ -65,14 +65,14 @@ function generateRestrooms()
 
 function getTheRestrooms()
 {
-    let tmp_1 = Math.random()-0.5;
-    let tmp_2 = Math.random()-0.5;
+    let tmp_1 = Math.random()-Math.random();
+    let tmp_2 = Math.random()-Math.random();
     getRestrooms(_lat+tmp_1, _lng+tmp_2);
 }
 
 function generateCrimes()
 {
-    for (let i=0; i<50; i++)
+    for (let i=0; i<100; i++)
     {
         setTimeout(getTheCrimes, i);
     }
@@ -81,8 +81,8 @@ function generateCrimes()
 // Get crimes from coordinates around the main coordinate
 function getTheCrimes()
 {
-    let tmp_1 = Math.random()-0.60;
-    let tmp_2 = Math.random()-0.60;
+    let tmp_1 = Math.random()-Math.random();
+    let tmp_2 = Math.random()-Math.random();
     getCrime(_lat+tmp_1, _lng+tmp_2, getRandom(1, 12));
 }
 

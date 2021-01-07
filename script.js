@@ -18,12 +18,19 @@ tileSize: 512,
 zoomOffset: -1
 }).addTo(mymap);
 
+let reduce = 15;
+
+
+// Refreshes page on map drag
 mymap.on("dragend", function(e) {
     let ctr = mymap.getCenter();
     _lat = ctr['lat'];
     _lng = ctr['lng'];
-    if (document.getElementById("restroom-cb").checked && document.getElementById("crime-cb").checked)
-        reloadMarkers();
+    if (document.getElementById("restroom-cb").checked && document.getElementById("crime-cb").checked) reloadMarkers();
+    UNPLOTALL();
+    all_restrooms.splice(0, Math.ceil(all_restrooms.length/reduce));
+    all_refuges.splice(0, Math.ceil(all_refuges.length/reduce));
+    all_crimes.splice(0, Math.ceil(all_crimes.length/reduce));
 });
 
 function reloadMarkers()
@@ -36,22 +43,20 @@ function reloadMarkers()
 
 function UNPLOTALL()
 {
-    for (let j=0; j<all_restrooms.length; j++)
+    for (let j=0; j<Math.ceil(all_restrooms.length/reduce); j++)
     {
         mymap.removeLayer(all_restrooms[j]); 
     }
     // Gender neutral
-    for (let i=0; i<all_refuges.length; i++)
+    for (let i=0; i<Math.ceil(all_refuges.length/reduce); i++)
     {
         mymap.removeLayer(all_refuges[i]);
     } 
-    for (let i=0; i<all_crimes.length; i++)
+    for (let i=0; i<Math.ceil(all_crimes.length/reduce); i++)
     {
         mymap.removeLayer(all_crimes[i]);
     }
-    // all_restrooms = [];
-    // all_refuges = [];
-    // all_crimes = [];
+
 }
 
 function replot()
