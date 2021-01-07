@@ -11,6 +11,46 @@ tileSize: 512,
 zoomOffset: -1
 }).addTo(mymap);
 
+mymap.on("dragend", function(e) {
+   let ctr = mymap.getCenter();
+   _lat = ctr['lat'];
+   _lng = ctr['lng'];
+   reloadMarkers();
+});
+
+function reloadMarkers()
+{
+    UNPLOTALL();
+    generateCrimes();
+    generateRestrooms();
+    replot();
+}
+
+function UNPLOTALL()
+{
+    for (let j=0; j<all_restrooms.length; j++)
+    {
+        mymap.removeLayer(all_restrooms[j]); 
+    }
+    // Gender neutral
+    for (let i=0; i<all_refuges.length; i++)
+    {
+        mymap.removeLayer(all_refuges[i]);
+    } 
+    for (let i=0; i<all_crimes.length; i++)
+    {
+        mymap.removeLayer(all_crimes[i]);
+    }
+    // all_restrooms = [];
+    // all_refuges = [];
+    // all_crimes = [];
+}
+
+function replot()
+{
+    plotCrimes();
+    plotRestrooms();
+}
 
 function plotCrimes()
 {
