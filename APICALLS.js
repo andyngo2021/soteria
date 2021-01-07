@@ -1,6 +1,6 @@
 async function getRestrooms(lat, lng)
 {
-    let url = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location?per_page=30&lat='+lat+'&lng='+lng;
+    let url = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location?per_page=20&lat='+lat+'&lng='+lng;
     let resp = await fetch(url);
     let data = await resp.json();
     for (let i=0; i<data.length; i++)
@@ -57,7 +57,7 @@ async function getCrime(lat, lng, month) // All strings btw
 
 function generateRestrooms()
 {
-    for (let i=0; i<5; i++)
+    for (let i=0; i<2; i++)
     {
         setTimeout(getTheRestrooms, 500*i);
     }
@@ -72,7 +72,7 @@ function getTheRestrooms()
 
 function generateCrimes()
 {
-    for (let i=0; i<100; i++)
+    for (let i=0; i<50; i++)
     {
         setTimeout(getTheCrimes, i);
     }

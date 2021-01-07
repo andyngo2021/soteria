@@ -1,7 +1,14 @@
 
 
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-    
+var mymap = L.map('mapid', {layers: MQ.mapLayer()}).setView([51.505, -0.09], 13);
+var dir = MQ.routing.directions();
+dir.route({
+    locations: [
+      '1600 pennsylvania ave, washington dc',
+      '935 pennsylvania ave, washington dc'
+    ]
+  });
+
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 maxZoom: 18,
 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
@@ -12,10 +19,11 @@ zoomOffset: -1
 }).addTo(mymap);
 
 mymap.on("dragend", function(e) {
-   let ctr = mymap.getCenter();
-   _lat = ctr['lat'];
-   _lng = ctr['lng'];
-   reloadMarkers();
+    let ctr = mymap.getCenter();
+    _lat = ctr['lat'];
+    _lng = ctr['lng'];
+    if (document.getElementById("restroom-cb").checked && document.getElementById("crime-cb").checked)
+        reloadMarkers();
 });
 
 function reloadMarkers()
@@ -116,3 +124,14 @@ function onCchangeCB()
 }
 
 var popup = L.popup();
+let route;
+document.getElementById('rp-btn')
+function showRoute()
+{
+
+}
+
+function removeRoute()
+{
+    mymap.removeLayer(route);
+}
