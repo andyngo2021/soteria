@@ -4,3 +4,159 @@
     bottom: 0;
     width: 100%;
   }
+
+body {
+    background-color: black;
+}
+
+
+/*  */
+
+.btn-group button {
+    background-color: #80a783; /* Green background */
+    border: 1px solid #57795a; /* Green border */
+    color: white; /* White text */
+    font-family: 'Nunito', sans-serif;
+    padding: 7px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 200px; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    font-size: 12px;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #c3e7c6;
+  }
+  
+  /* Style for the Island Controls */
+  .header {
+    display: block;
+    position: relative;
+    color: white;
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+    left: 35px;
+  }
+  
+  h1 {
+    padding-left: 18px;
+  }
+  
+  img {
+    display: block;
+    position: relative;
+    left: 70px;
+  }
+  
+  .slidecontainer {
+    width: 275px;
+    vertical-align: middle;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 72%;
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s; 
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border: 0;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+  
+  /* text style */
+  
+  p {
+    color: white;
+    font-size: 11px;
+  }
+  
+  p1 {
+    color: white;
+    font-size: 13px;
+    font-family: 'Nunito', sans-serif;
+    padding-left: 0%;
+    display: inline-block;
+  }
+  
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+  
+  
+  
+  
+  input[type="color"] {
+    -webkit-appearance: none;
+    position:relative;
+    width: 193px;
+  }
+  /*
+  input[type="color"]::-webkit-color-swatch {
+    position:absolute;
+    top:-1px;
+    left:-1px;
+    right:-1px;
+    bottom:-1px;
+    box-sizing: border-box;
+    border:2px solid transparent;
+  } */
+  
+  .scrollable {
+    height: 100%; /* or any value */
+    overflow-y: auto;
+    overflow-x: hidden; 
+  }
+  
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:black; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
