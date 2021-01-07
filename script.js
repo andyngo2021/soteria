@@ -15,17 +15,6 @@ L.marker([51.51, -0.091], {icon: restroomIcon}).addTo(mymap).bindPopup("<b>Restr
 //L.marker([51.5, -0.09]).addTo(mymap)
 // .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 
-L.circle([51.508, -0.11], 500, {
-color: 'red',
-fillColor: '#f03',
-fillOpacity: 0.5
-}).addTo(mymap).bindPopup("I am a circle.");
-
-L.polygon([
-[51.509, -0.08],
-[51.503, -0.06],
-[51.51, -0.047]
-]).addTo(mymap).bindPopup("I am a polygon.");
 
 
 var popup = L.popup();

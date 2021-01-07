@@ -6,7 +6,7 @@
   }
 
 body {
-    background-color: black;
+    background-color: #207567;
 }
 
 
@@ -46,6 +46,11 @@ body {
   h1 {
     padding-left: 18px;
   }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
   
   img {
     display: block;
@@ -137,7 +142,7 @@ body {
   } */
   
   .scrollable {
-    height: 110%;
+    height: 98%;
     position: absolute;
     width: 20%;  /* or any value */
     border:red;
