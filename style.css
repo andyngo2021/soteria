@@ -40,7 +40,7 @@ body {
     color: white;
     font-size: 12px;
     font-family: 'Nunito', sans-serif;
-    left: 35px;
+    text-align: center;
   }
   
   h1 {
@@ -137,26 +137,13 @@ body {
   } */
   
   .scrollable {
-    height: 100%; /* or any value */
+    height: 110%;
+    position: absolute;
+    width: 20%;  /* or any value */
+    border:red;
     overflow-y: auto;
     overflow-x: hidden; 
+    background: #207567;
+    margin-left: 80%;
   }
-  
-  ::-webkit-scrollbar {
-    width: 1px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background:black; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: black; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: black; 
-  }
+ 
