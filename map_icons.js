@@ -33,13 +33,18 @@ var LeafIcon = L.Icon.extend({
 var greenIcon = new LeafIcon({iconUrl: 'leaf-green.png'})
 */
 
-var crimeIcon = L.icon({
-    iconUrl: 'crime.png',
-    shadowUrl: 'empty.png',
-    iconSize: [50, 50],
-    shadowSize: [0, 0],
-    iconAnchor: [25, 25],
-    shadowAnchor: [0, 0],
-    popupAnchor: [-3, -30]
+var icon_template = L.Icon.extend({
+    options: {
+        shadowUrl: 'empty.png',
+        iconSize: [50, 50],
+        shadowSize: [0, 0],
+        iconAnchor: [25, 25],
+        shadowAnchor: [0, 0],
+        popupAnchor: [-3, -30]
+    }
 });
+
+var crimeIcon = new icon_template({iconUrl: 'crime.png'});
+
+var restroomIcon = new icon_template({iconUrl: 'droplet.png'});
 
