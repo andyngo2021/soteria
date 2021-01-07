@@ -48,3 +48,5 @@ var crimeIcon = new icon_template({iconUrl: 'crime.png'});
 
 var restroomIcon = new icon_template({iconUrl: 'droplet.png'});
 
+var refugeIcon = new icon_template({iconUrl: 'droplet2.png'});
+

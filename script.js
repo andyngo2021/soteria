@@ -9,8 +9,10 @@ tileSize: 512,
 zoomOffset: -1
 }).addTo(mymap);
 
-L.marker([51.5, -0.09], {icon: crimeIcon}).addTo(mymap).bindPopup("<b>Theft</b><br/>Short Description here");
+let ico = L.marker([51.5, -0.09], {icon: crimeIcon}).bindPopup("<b>Theft</b><br/>Short Description here");
+ico.addTo(mymap);
 L.marker([51.51, -0.091], {icon: restroomIcon}).addTo(mymap).bindPopup("<b>Restroom</b><br/>Short Description here");
+L.marker([51.49, -0.089], {icon: refugeIcon}).addTo(mymap).bindPopup("<b>LGBTQ-friendly Restroom</b><br/>Short Description here");
 
 //L.marker([51.5, -0.09]).addTo(mymap)
 // .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
