@@ -9,8 +9,10 @@ tileSize: 512,
 zoomOffset: -1
 }).addTo(mymap);
 
-L.marker([51.5, -0.09]).addTo(mymap)
-.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+L.marker([51.5, -0.09], {icon: crimeIcon}).addTo(mymap).bindPopup("<b>Theft</b><br/>Short Description here");
+
+//L.marker([51.5, -0.09]).addTo(mymap)
+// .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 
 L.circle([51.508, -0.11], 500, {
 color: 'red',
