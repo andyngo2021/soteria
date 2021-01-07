@@ -50,3 +50,33 @@ var map = new ol.Map({
         zoom: 10
     })
 });
+
+var layer = new ol.layer.Vector({
+    source: new ol.source.Vector({
+      features: [new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([6.937, 50.926]))})]})});
+   map.addLayer(layer);
+
+var layers = [new ol.layer.Vector({
+    source: new ol.source.Vector({
+      features: [new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([6.937, 50.926]))})]})})]
+
+function drawPoints()
+{
+
+    for (let i=0; i<layers.length; i++)
+    {
+        map.addLayer(layers[i]);
+    }
+}
+function addPointToMap(lat, lng)
+{
+    lat = parseInt(lat);
+    lng = parseInt(lng);
+    layers.push(new ol.layer.Vector({
+        source: new ol.source.Vector({
+          features: [new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.fromLonLat([lng, lat]))})]})}));
+    drawPoints();
+}
