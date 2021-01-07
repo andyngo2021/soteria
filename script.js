@@ -11,13 +11,6 @@ tileSize: 512,
 zoomOffset: -1
 }).addTo(mymap);
 
-let ico = L.marker([51.5, -0.09], {icon: crimeIcon}).bindPopup("<b>Theft</b><br/>Short Description here");
-ico.addTo(mymap);
-L.marker([51.51, -0.091], {icon: restroomIcon}).addTo(mymap).bindPopup("<b>Restroom</b><br/>Short Description here");
-L.marker([51.49, -0.089], {icon: refugeIcon}).addTo(mymap).bindPopup("<b>LGBTQ-friendly Restroom</b><br/>Short Description here");
-
-//L.marker([51.5, -0.09]).addTo(mymap)
-// .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 
 function plotCrimes()
 {
@@ -27,5 +20,59 @@ function plotCrimes()
     }
 }
 
+function plotRestrooms()
+{
+    // Non-gender neutral
+    for (let j=0; j<all_restrooms.length; j++)
+    {
+        all_restrooms[j].addTo(mymap);
+    }
+    // Gender neutral
+    for (let i=0; i<all_refuges.length; i++)
+    {
+        all_refuges[i].addTo(mymap);
+    }      
+}
+
+// When checkbox for restroom is toggled
+function onRRchangeCB()
+{
+    let check = document.getElementById("restroom-cb").checked;
+    // draw
+    if (check)
+    {
+        plotRestrooms();
+    }
+    // then remove
+    else
+    {
+        // Non-gender neutral
+        for (let j=0; j<all_restrooms.length; j++)
+        {
+            mymap.removeLayer(all_restrooms[j]); 
+        }
+        // Gender neutral
+        for (let i=0; i<all_refuges.length; i++)
+        {
+            mymap.removeLayer(all_refuges[i]);
+        }      
+    }
+}
+
+function onCchangeCB()
+{
+    let check = document.getElementById("crime-cb").checked;
+    if (check)
+    {
+        plotCrimes();
+    }
+    else
+    {
+        for (let i=0; i<all_crimes.length; i++)
+        {
+            mymap.removeLayer(all_crimes[i]);
+        }
+    }
+}
 
 var popup = L.popup();

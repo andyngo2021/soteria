@@ -10,6 +10,7 @@
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
  crossorigin=""></script>
+ <script src="run.js"></script>
  <script src="APICALLS.js"></script>
  <script src="map_icons.js"></script>
  <script src="globals.js"></script>
@@ -42,11 +43,11 @@
       
       <div class="check boxes">
         <div style='z-index: 1'><img src="droplet.png" width="40"></div>
-        <input type="checkbox" >
+        <input type="checkbox" id="restroom-cb" onchange="onRRchangeCB();">
       <label for="vehicle1"> Display Nearby Restrooms</label><br><br>
 
       <div style='z-index: 1'><img src="crime.png" width="40"></div>
-      <input type="checkbox">
+      <input type="checkbox" id="crime-cb" onchange="onCchangeCB();">
       <label for="vehicle1"> Display Nearby Police Station</label><br><br>
       </div>  
 
@@ -58,10 +59,11 @@
       </div>
 
       <div>
-        <button onclick="generateCrimes();">GET CRIME</button>
-        <button onclick="plotCrimes();">PLOT CRIME</button>
-        <button>GET RESTROOMS</button>
-        <button>PLOT RESTROOMS</button>
+        <!-- generate crimes and get restrooms must be called in windowload, remove buttons later -->
+        <!-- <button onclick="generateCrimes();">GET CRIME</button> -->
+        <!-- <button onclick="plotCrimes();">PLOT CRIME</button> -->
+        <!-- <button onclick="generateRestrooms();">GET RESTROOMS</button> -->
+        <!-- <button onclick="plotRestrooms()">PLOT RESTROOMS</button> -->
       </div>
 
   </div>

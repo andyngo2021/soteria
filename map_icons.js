@@ -36,9 +36,9 @@ var greenIcon = new LeafIcon({iconUrl: 'leaf-green.png'})
 var icon_template = L.Icon.extend({
     options: {
         shadowUrl: 'empty.png',
-        iconSize: [50, 50],
+        iconSize: [30, 30],
         shadowSize: [0, 0],
-        iconAnchor: [25, 25],
+        iconAnchor: [15, 15],
         shadowAnchor: [0, 0],
         popupAnchor: [-3, -30]
     }
