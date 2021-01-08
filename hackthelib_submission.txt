@@ -8,15 +8,16 @@ Simply visit https://andyngo2021.github.io/soteria/
 Check the checkboxes on the sidebar to toggle on/off labels that show where restrooms (including gender neutral ones) are located 
 as well as locations where crimes have happened.
 
+Demo video: https://youtu.be/CF4Gypo7SD4 
 
 Letter:
 
 Hello judges!
 
-Our website, Soteria, was inspired by the Greek goddess of safety and deliverance. We've created this project to help those
-who identify as LGBTQ have an easier time finding gender neutral restrooms. The website was designed for individuals who
-primarily travel on foot/bike to help them easily find restrooms and avoid areas where a lot of crime might be happening.
+Our website's name, Soteria, was inspired by the Greek goddess of safety and deliverance. The project was designed for individuals who
+primarily travel on foot/bike to help them easily find restrooms and avoid areas where a lot of crime might be happening. We've also
+included markers for unisex restrooms to help members of the LGBTQ community easily find restrooms that are gender neutral.
 
 We hope you have as fun of a time looking at our project as we did creating it!
 
-Have a wonderful day!!
+Thank you so much to HackTheLib for creating such a fun and awesome hackathon and have a wonderful day!!
