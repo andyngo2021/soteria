@@ -5,8 +5,15 @@
     width: 100%;
   }
 
+
 body {
     background-color: #207567;
+    font-family: 'Nunito', sans-serif;
+}
+
+input {
+    height: 20px;
+    width: 40%;
 }
 
 
@@ -32,7 +39,7 @@ body {
   .btn-group button:hover {
     background-color: #c3e7c6;
   }
-  
+
   /* Style for the Island Controls */
   .header {
     display: block;
@@ -144,7 +151,7 @@ body {
   .scrollable {
     height: 98%;
     position: absolute;
-    width: 20%;  /* or any value */
+    width: 21%;  /* or any value */
     border:red;
     overflow-y: auto;
     overflow-x: hidden; 
@@ -152,3 +159,6 @@ body {
     margin-left: 80%;
   }
  
+  input[type=checkbox] {
+    transform: scale(2);
+}
