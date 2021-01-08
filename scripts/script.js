@@ -1,13 +1,6 @@
 
 
 var mymap = L.map('mapid', {layers: MQ.mapLayer()}).setView([51.505, -0.09], 13);
-var dir = MQ.routing.directions();
-dir.route({
-    locations: [
-      '1600 pennsylvania ave, washington dc',
-      '935 pennsylvania ave, washington dc'
-    ]
-  });
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 maxZoom: 18,
