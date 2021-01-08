@@ -3,7 +3,7 @@
   <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-     <link rel="icon" href="logo.png">
+     <link rel="icon" href="assets/logo.png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
@@ -17,10 +17,10 @@
 <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=KsZFrXoe7wyjWAXQWBQlnWjmkgj8dFRp"></script>
 <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=KsZFrXoe7wyjWAXQWBQlnWjmkgj8dFRp"></script>
 
- <script src="run.js"></script>
- <script src="APICALLS.js"></script>
- <script src="map_icons.js"></script>
- <script src="globals.js"></script>
+ <script src="scripts/run.js"></script>
+ <script src="scripts/APICALLS.js"></script>
+ <script src="scripts/map_icons.js"></script>
+ <script src="scripts/globals.js"></script>
     
     <title>Soteria</title>
     <link rel="stylesheet" href="style.css">
@@ -33,7 +33,7 @@
     bottom: 0;
     margin-left: 0%;
     width: 80%;"></div>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 
 
 <!--  -->
@@ -42,7 +42,7 @@
 <br>
   <div class="inside_element">
     <div id="soteria-image">
-      <div style='margin-right: 10%;'><img src="logo.png" width="55%"></div>
+      <div style='margin-right: 10%;'><img src="assets/logo.png" width="55%"></div>
     </div>	
     <!-- <br> -->
 
@@ -51,14 +51,14 @@
       <div style='z-index: 1'><h1 style="font-size: 30px; margin-right: 10%;">Soteria</h1></div> 
       <br><br>
       <div class="check-boxes">
-        <div style='z-index: 1'><img src="droplet.png" style="margin-left: 8%" width="30%" height="auto"></div><br>
+        <div style='z-index: 1'><img src="assets/droplet.png" style="margin-left: 8%" width="30%" height="auto"></div><br>
         <form>
         <label for="restroom-cb" style="margin-right: 10px; font-size: 15px;"> Display Nearby Restrooms</label><br><br>
         <input style="margin-right: 10%" type="checkbox" id="restroom-cb" onchange="onRRchangeCB();">
       </form>
       <br><br><br>
 
-      <div style='z-index: 1'><img src="crime.png" style="margin-left: 8%" width=30% height="auto"></div>
+      <div style='z-index: 1'><img src="assets/crime.png" style="margin-left: 8%" width=30% height="auto"></div>
       <form style="margin-left: 6%;">
       <label for="crime-cb" style="margin-right: 10%; font-size: 15px;">Display Nearby Crimes</label><br><br>
       <input style="margin-right: 15%" type="checkbox" id="crime-cb" onchange="onCchangeCB();">
