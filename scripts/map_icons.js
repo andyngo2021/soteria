@@ -1,5 +1,5 @@
 /*
-https://leafletjs.com/examples/custom-icons/ 
+Credits to https://leafletjs.com/examples/custom-icons/ 
 Example to follow as a guide:
 
 var greenIcon = L.icon({
